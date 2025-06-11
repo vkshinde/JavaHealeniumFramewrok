@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <script>
+        function changeElementIDs() {
+            let username = document.getElementById("username");
+            let password = document.getElementById("password");
+            let loginButton = document.getElementById("loginButton");
+
+            let newUsernameID = "user_" + Math.floor(Math.random() * 1000);
+            let newPasswordID = "pass_" + Math.floor(Math.random() * 1000);
+            let newButtonID = "btn_" + Math.floor(Math.random() * 1000);
+
+            username.id = newUsernameID;
+            password.id = newPasswordID;
+            loginButton.id = newButtonID;
+
+            // Update placeholders dynamically
+            username.setAttribute("placeholder", "Enter username (" + newUsernameID + ")");
+            password.setAttribute("placeholder", "Enter password (" + newPasswordID + ")");
+        }
+        window.onload = changeElementIDs;
+    </script>
+</head>
+<body>
+<h2>Login</h2>
+<form id="loginForm">
+    <label for="username9">Username:</label>
+    <input type="text" id="username9" name="username" placeholder="Enter username"><br><br>
+
+    <label for="password9">Password:</label>
+    <input type="password" id="password9" name="password" placeholder="Enter password"><br><br>
+
+    <button id="loginButton" type="submit">Login</button>
+</form>
+</body>
+</html>
